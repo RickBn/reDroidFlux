@@ -89,10 +89,10 @@ bool MidiRingAudioProcessor::isBusesLayoutSupported(const BusesLayout& layouts) 
 void MidiRingAudioProcessor::parameterChanged(const String& paramID, float newValue)
 {
     if (paramID == NAME_MIDI_ACTIVE)
-        midiActive = newValue;
+        midiActive = newValue > 0.5f;
 
     if (paramID == NAME_POST_MOD)
-        postMod = newValue;
+        postMod = newValue > 0.5f;
 
 }
 

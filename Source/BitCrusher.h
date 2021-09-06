@@ -36,7 +36,7 @@ public:
 		switch (degradationType)
 		{
 		case 0:
-			// Hard clipping
+			// Soft clipping
 			sampleValue = tanh(sample * inputGain) / sqrt(inputGain);
 			break;
 

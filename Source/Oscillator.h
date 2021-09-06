@@ -91,10 +91,10 @@ public:
 			stereoFreq = newValue;
 
 		if (paramID == NAME_OSC_ACTIVE)
-			oscActive = newValue;
+			oscActive = newValue > 0.5f;
 
 		if (paramID == NAME_FILTER_ACTIVE)
-			filterActive = newValue;
+			filterActive = newValue > 0.5f;
 
 		if (paramID == NAME_CUTOFF)
 			lowPass.parameterChanged(paramID, newValue);

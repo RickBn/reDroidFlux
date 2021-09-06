@@ -67,7 +67,7 @@ static AudioProcessorValueTreeState::ParameterLayout createParametersLayout()
     params.push_back(std::make_unique<AudioParameterBool>(NAME_MIDI_HOLD, "Midi hold", DEFAULT_MIDI_HOLD));
 
     params.push_back(std::make_unique<AudioParameterBool>(NAME_POST_MOD, "Post modulation", DEFAULT_POST_MOD));
-    params.push_back(std::make_unique<AudioParameterChoice>(NAME_DEG_TYPE, "Deg. type", StringArray("Hard clipping", "Quantization noise", "Aliasing"), DEFAULT_DEG_TYPE));
+    params.push_back(std::make_unique<AudioParameterChoice>(NAME_DEG_TYPE, "Deg. type", StringArray("Soft clipping", "Quantization noise", "Aliasing"), DEFAULT_DEG_TYPE));
     params.push_back(std::make_unique<AudioParameterFloat>(NAME_INPUT_GAIN, "Input gain", NormalisableRange<float>(1.0f, 60.0f, 0.1f), DEFAULT_INPUT_GAIN));
     params.push_back(std::make_unique<AudioParameterInt>(NAME_BIT_DEPTH, "Bit depth", 1, 24, DAFAULT_BIT_DEPTH));
     params.push_back(std::make_unique<AudioParameterInt>(NAME_SUB_FACTOR, "Subsampling factor", 1, 100, DEFAULT_SUB_FACTOR));

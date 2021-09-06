@@ -201,15 +201,15 @@ PluginEditor::PluginEditor (MidiRingAudioProcessor& p, AudioProcessorValueTreeSt
 
     amt_slider->setBounds (304, 256, 96, 96);
 
-    hardClip_button.reset (new juce::TextButton ("HardClipping"));
-    addAndMakeVisible (hardClip_button.get());
-    hardClip_button->setButtonText (TRANS("Hard clipping"));
-    hardClip_button->setRadioGroupId (1);
-    hardClip_button->addListener (this);
-    hardClip_button->setColour (juce::TextButton::buttonColourId, juce::Colour (0xff4a0c3c));
-    hardClip_button->setColour (juce::TextButton::buttonOnColourId, juce::Colour (0xfff8bbff));
+    softClip_button.reset (new juce::TextButton ("SoftClipping"));
+    addAndMakeVisible (softClip_button.get());
+    softClip_button->setButtonText (TRANS("Soft clipping"));
+    softClip_button->setRadioGroupId (1);
+    softClip_button->addListener (this);
+    softClip_button->setColour (juce::TextButton::buttonColourId, juce::Colour (0xff4a0c3c));
+    softClip_button->setColour (juce::TextButton::buttonOnColourId, juce::Colour (0xfff8bbff));
 
-    hardClip_button->setBounds (56, 80, 128, 24);
+    softClip_button->setBounds (56, 80, 128, 24);
 
     degtype_group.reset (new juce::GroupComponent ("DegType",
                                                    TRANS("Degradation type")));
@@ -418,7 +418,7 @@ PluginEditor::~PluginEditor()
     midiHoldAttchment = nullptr;
     filterActiveAttchment = nullptr;
 
-    hardClipAttchment = nullptr;
+    softClipAttchment = nullptr;
     quantNoiseAttachment = nullptr;
     aliasingAttchment = nullptr;
 
@@ -454,7 +454,7 @@ PluginEditor::~PluginEditor()
     triang_button = nullptr;
     square_button = nullptr;
     amt_slider = nullptr;
-    hardClip_button = nullptr;
+    softClip_button = nullptr;
     degtype_group = nullptr;
     quantNoise_button = nullptr;
     alias_button = nullptr;
@@ -645,9 +645,9 @@ void PluginEditor::buttonClicked (juce::Button* buttonThatWasClicked)
         valueTreeState.getParameter(NAME_WAVEFORM)->setValueNotifyingHost(1.0f);
         //[/UserButtonCode_square_button]
     }
-    else if (buttonThatWasClicked == hardClip_button.get())
+    else if (buttonThatWasClicked == softClip_button.get())
     {
-        //[UserButtonCode_hardClip_button] -- add your button handler code here..
+        //[UserButtonCode_softClip_button] -- add your button handler code here..
         valueTreeState.getParameter(NAME_DEG_TYPE)->setValueNotifyingHost(0.0f);
 
         inputGain_label->setVisible(true);
@@ -658,8 +658,7 @@ void PluginEditor::buttonClicked (juce::Button* buttonThatWasClicked)
 
         subFactor_label->setVisible(false);
         subFactor_slider->setVisible(false);
-
-        //[/UserButtonCode_hardClip_button]
+        //[/UserButtonCode_softClip_button]
     }
     else if (buttonThatWasClicked == quantNoise_button.get())
     {
@@ -809,9 +808,9 @@ BEGIN_JUCER_METADATA
           min="0.0" max="10.0" int="0.0" style="Rotary" textBoxPos="TextBoxBelow"
           textBoxEditable="1" textBoxWidth="80" textBoxHeight="20" skewFactor="1.0"
           needsCallback="0"/>
-  <TEXTBUTTON name="HardClipping" id="da4a8c44e1035d07" memberName="hardClip_button"
+  <TEXTBUTTON name="SoftClipping" id="da4a8c44e1035d07" memberName="softClip_button"
               virtualName="" explicitFocusOrder="0" pos="56 80 128 24" bgColOff="ff4a0c3c"
-              bgColOn="fff8bbff" buttonText="Hard clipping" connectedEdges="0"
+              bgColOn="fff8bbff" buttonText="Soft clipping" connectedEdges="0"
               needsCallback="1" radioGroupId="1"/>
   <GROUPCOMPONENT name="DegType" id="fc421bc790fe9c93" memberName="degtype_group"
                   virtualName="" explicitFocusOrder="1" pos="48 64 144 112" outlinecol="ff00eebf"

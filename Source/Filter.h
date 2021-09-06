@@ -38,9 +38,6 @@ public:
 		if (paramID == NAME_RATE)
 			cutoff_freq = newValue;
 
-		//if (paramID == NAME_Q)
-		//	quality = newValue;
-
 		updateCoefficients();
 	}
 

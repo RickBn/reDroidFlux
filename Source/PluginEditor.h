@@ -65,7 +65,7 @@ private:
     std::unique_ptr<ButtonAttachment> midiHoldAttchment;
     std::unique_ptr<ButtonAttachment> filterActiveAttchment;
 
-    std::unique_ptr<ButtonAttachment> hardClipAttchment;
+    std::unique_ptr<ButtonAttachment> softClipAttchment;
     std::unique_ptr<ButtonAttachment> quantNoiseAttachment;
     std::unique_ptr<ButtonAttachment> aliasingAttchment;
 
@@ -102,7 +102,7 @@ private:
     std::unique_ptr<juce::TextButton> triang_button;
     std::unique_ptr<juce::TextButton> square_button;
     std::unique_ptr<juce::Slider> amt_slider;
-    std::unique_ptr<juce::TextButton> hardClip_button;
+    std::unique_ptr<juce::TextButton> softClip_button;
     std::unique_ptr<juce::GroupComponent> degtype_group;
     std::unique_ptr<juce::TextButton> quantNoise_button;
     std::unique_ptr<juce::TextButton> alias_button;

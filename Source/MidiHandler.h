@@ -42,7 +42,7 @@ private:
 	void parameterChanged(const String& paramID, float newValue)
 	{
 		if (paramID == NAME_MIDI_HOLD)
-			midiHold = newValue;
+			midiHold = newValue > 0.5f;
 	}
 
 	double sr = 44100.0;
