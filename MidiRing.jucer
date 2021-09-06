@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="Zum2tv" name="MidiRing" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="1" displaySplashScreen="1" jucerFormatVersion="1"
+              pluginFormats="buildStandalone,buildVST3" pluginCharacteristicsValue="pluginWantsMidiIn"
+              pluginManufacturer="Riccardo Bona" pluginManufacturerCode="rcbn"
+              pluginVST3Category="Distortion,Fx,Modulation" pluginChannelConfigs="{2, 2}, {1, 1}">
+  <MAINGROUP id="twZzqG" name="MidiRing">
+    <GROUP id="{96EF3D6C-C519-DD6F-2A7B-C8AB9C65FACC}" name="Source">
+      <FILE id="YMAKVN" name="Parameters.h" compile="0" resource="0" file="Source/Parameters.h"/>
+      <FILE id="ihvTnC" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="oE7bKE" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <GROUP id="{A9E1C751-2FB9-0E04-B189-9F0471DACE3B}" name="DSP">
+        <FILE id="pkSWNr" name="BitCrusher.h" compile="0" resource="0" file="Source/BitCrusher.h"/>
+        <FILE id="ClhDut" name="DryWet.h" compile="0" resource="0" file="Source/DryWet.h"/>
+        <FILE id="PDRFYm" name="Filter.h" compile="0" resource="0" file="Source/Filter.h"/>
+        <FILE id="wurvQa" name="Multiplier.h" compile="0" resource="0" file="Source/Multiplier.h"/>
+        <FILE id="cG2cxt" name="Oscillator.h" compile="0" resource="0" file="Source/Oscillator.h"/>
+        <GROUP id="{DD10D9A7-2A7C-9F37-987F-1F6D4EB0A965}" name="MIDI">
+          <FILE id="GUkCxx" name="MidiHandler.h" compile="0" resource="0" file="Source/MidiHandler.h"/>
+        </GROUP>
+      </GROUP>
+      <GROUP id="{9D38F367-6075-CE94-4D6F-C1CC8D29E313}" name="GUI">
+        <FILE id="scOEhB" name="PluginEditor.cpp" compile="1" resource="0"
+              file="Source/PluginEditor.cpp"/>
+        <FILE id="CXFYAg" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      </GROUP>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <VS2019 targetFolder="Builds/VisualStudio2019">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="MidiRing"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="MidiRing"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../Programmi/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../Programmi/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../Programmi/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../Programmi/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../Programmi/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../Programmi/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../Programmi/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../Programmi/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../Programmi/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../Programmi/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../Programmi/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../Programmi/JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2019>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <LIVE_SETTINGS>
+    <WINDOWS/>
+  </LIVE_SETTINGS>
+</JUCERPROJECT>
