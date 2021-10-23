@@ -1,5 +1,5 @@
 # RE_DROID_FLUX 1.1.0
-
+![gui](https://drive.google.com/uc?export=view&id=1KiG4MFtoO0-c-5lmmAQcP_MLTnLMMCOC)
 # Plugin description
 reDroidFlux is an all-in-one MIDI controlled ring modulator and bit crusher. Modulation frequency can be changed manually or controlled via MIDI input. The bit crusher effect can be applied before or after the modulation. 
 
@@ -20,6 +20,9 @@ VST3	Shared	C:\Program Files\Common Files\VST3
 
 # How to use
 The GUI allows to control the parameters shown in the picture below:
+
+![diag](https://drive.google.com/uc?export=view&id=1oajgG2xvdI7vIl1QjWv8AxbGYlRBVLQk)
+
  
 With “Note-on hold” checked the oscillator rate will be the frequency of the last note-on received.
 With “Note-on hold” un-checked, in case of a note-off received, the modulation will cease to have effect until the next note-on.
